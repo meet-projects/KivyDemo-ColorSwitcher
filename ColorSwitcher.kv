@@ -1,0 +1,16 @@
+#:kivy 1.8.0
+
+<SpecialWidget>:
+	FloatLayout:
+		canvas.before:
+			Color:
+				rgba: 0, 1, 0, 1
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		Button:
+			text: 'change background'
+			pos: root.width/2-self.width/2, root.height/2-self.height/2
+			size: 170, 40
+			size_hint: None,None
+			on_press: app.change_color()
